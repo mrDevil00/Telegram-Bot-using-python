@@ -58,7 +58,6 @@ def handle_response(text: str) -> str:
         return 'Bye! Have a good day.'
     
   
-        
     return "I do not understand what you wrote...."
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
