@@ -2,9 +2,9 @@ from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes,filters
 
-TOKEN: Final = '6985163788:AAEmAOaS_DDbrZeqTkcFt1DGznRwaciLNko'
+TOKEN: Final = 'TOKEN_NUMBER_OF_YOUR_BOT'
 
-BOT_USERNAME: Final = '@Joy_python_bot'
+BOT_USERNAME: Final = 'BOT_USERNAME'
 
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -17,15 +17,7 @@ If you are facing any problem or having problem related to Bot then you can mail
 
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("""This is a custom command!
-    Here are some predefined commands that can be answered by Python_Bot.
-    1.What is python?
-    2.Comment in python?
-    3.Variables in python?
-    4.Data types in python?
-    5.Functions in python?
-    6.Name some libraries of python?
-    7.Exception handling in python?
-    8.File handling in python?""")
+    """)
 
 
 
@@ -65,47 +57,7 @@ def handle_response(text: str) -> str:
     if 'bye' in processed:
         return 'Bye! Have a good day.'
     
-    if 'what is python?' in processed:
-        return ' Python is a high-level programming language known for its simplicity and readability. Its versatile, used in web development, data analysis, artificial intelligence, and more.'  
-    
-    if 'comment in python?' in processed:
-        return """for multiple line (""" """ or ''' ''') and '#' for single line comment."""
-        
-    if 'data types in python?' in processed:
-        return "Python has several data types including int for integers, float for floating-point numbers, str for strings, bool for Boolean values, list, tuple, and dict for data structures, among others."
-        
-    if 'variables in python?' in processed:
-        return """You can declare a variable in Python by assigning a value to a name.
-        Like x=5,abc1=10, etc. But never start a variable name with digit.
-        We can start a variable name with _ , a1 , a not like 12a. """
-        
-    if 'functions in python?' in processed:
-        return """By using 'def' keyword we can create function.
-        There are two types of functions in python 1. Built in function and 2. User define function.
-        Built in function:- The functions which are coming along with Python software automatically, are called built in functions or predefined functionsExample: id() , type() , input() , eval() , etc..
-        User define function:- The functions which are developed by programmer explicitly according to business requirements, are called user defined functions.
-        Syntax to create user defined functions:
-        Like this- def function_name(parameters):"""
-        
-    if 'name some libraries of python?' in processed:
-        return """A Python library is a collection of functions and methods that allow you to perform many actions without writing your own code.
-        Some of the python libraries are Pandas, Numpy, turtle, time and many more."""
-    
-    if 'exception handling in python?' in processed:
-        return """Exceptions in Python can be handled using try, except, and optionally 'finally' blocks. For example
-            try:
-            # code that might raise an exception
-            result = 10 / 0
-            except ZeroDivisionError:
-            print("Cannot divide by zero!")
-            """
-        
-    if 'file handling in python?' in processed:
-        return """ You can open a file using the open() function, read or write content, and close the file using close(). For instance:
-            file = open('example.txt', 'r')  # 'r' for reading, 'w' for writing
-              content = file.read()  # read file content
-              file.close()  # close the file
-              """
+  
         
     return "I do not understand what you wrote...."
 
