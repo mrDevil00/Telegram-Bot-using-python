@@ -12,8 +12,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("""Hello! This is help command! How can i help!
-If you are facing any problem or having problem related to Bot then you can mail on xyz987@gmail.com.""")
-
+If you are facing any problem or having problem related to Bot then you can mail on xyz987@gmail.com.""")
 
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("""This is a custom command!
